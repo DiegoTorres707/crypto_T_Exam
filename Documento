@@ -1,0 +1,41 @@
+Ejemplo numérico del grupo de puntos racionales de una curva elíptica de la forma
+
+                           Y^2 = X^3 + aX + b
+
+                        sobre un campo primo Z_P.
+
+gerardov@gerardov:~/Clases$ ./putosRacionalesCE 5 0 1 
+Curva Elíptica: y^2 = x^3 + 0x + 1, sobre el campo primo Z_5 
+Puntos Racionales: (-1,-1) ( 0, 1) ( 0, 4) ( 2, 2) ( 2, 3) ( 4, 0)  |G|=6 
+El grupo: 
+   +    | (-1,-1) ( 0, 1) ( 0, 4) ( 2, 2) ( 2, 3) ( 4, 0)   Orden 
+---------------------------------------------------------------- 
+(-1,-1) | (-1,-1) ( 0, 1) ( 0, 4) ( 2, 2) ( 2, 3) ( 4, 0)     1 
+( 0, 1) | ( 0, 1) ( 0, 4) (-1,-1) ( 2, 3) ( 4, 0) ( 2, 2)     3 
+( 0, 4) | ( 0, 4) (-1,-1) ( 0, 1) ( 4, 0) ( 2, 2) ( 2, 3)     3 
+( 2, 2) | ( 2, 2) ( 2, 3) ( 4, 0) ( 0, 4) (-1,-1) ( 0, 1)     6 
+( 2, 3) | ( 2, 3) ( 4, 0) ( 2, 2) (-1,-1) ( 0, 1) ( 0, 4)     6 
+( 4, 0) | ( 4, 0) ( 2, 2) ( 2, 3) ( 0, 1) ( 0, 4) (-1,-1)     2 
+
+Otro más
+
+gerardov@gerardov:~/Clases$ ./putosRacionalesCE 5 3 1 
+Curva Eliptica: y^2 = x^3 + 3x + 1 , sobre el campo primo Z_5 
+Puntos Racionales: (-1,-1) ( 0, 1) ( 0, 4) ( 1, 0) ( 2, 0)  |G|=5 
+El grupo: 
+   +    | (-1,-1) ( 0, 1) ( 0, 4) ( 1, 0) ( 2, 0)   Orden 
+-------------------------------------------------------- 
+(-1,-1) | (-1,-1) ( 0, 1) ( 0, 4) ( 1, 0) ( 2, 0)     1 
+( 0, 1) | ( 0, 1) ( 1, 0) (-1,-1) ( 0, 4) ( 2, 0)     4 
+( 0, 4) | ( 0, 4) (-1,-1) ( 1, 0) ( 0, 1) ( 2, 0)     4 
+( 1, 0) | ( 1, 0) ( 0, 4) ( 0, 1) (-1,-1) ( 2, 0)     2 
+( 2, 0) | ( 2, 0) ( 2, 0) ( 2, 0) ( 2, 0) (-1,-1)     2 
+
+Nota: Obs. Que G NO es un grupo pues: ((0,1)+(2,0))+(2,0)!=(0,1)+((2,0)+(2,0))
+
+                               Examen-Tarea
+
+Sea Y^2 = X^3 + X + 1 (i.e. a=b=1) sobre Z_{10007} demuestre que P=(7,5300) es punto 
+racional de la curva anterior cuyo orden es 10065. Más aún, suponga la d=12345 es la 
+llave privada del criptosistema, encuentre el valor de la llave pública Q, la cual 
+como se sabe está dada por Q=dP.
